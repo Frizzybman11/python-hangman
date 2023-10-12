@@ -35,6 +35,7 @@ def gameRun(strikes, guess_count, guess_letters, word, hidden_word):
     print(" ".join(hidden_word) + "  Strikes: " + str(guess_count) +  "  Guessed letters: " + ", ".join(guess_letters))
     if "_" in hidden_word and guess_count < strikes:
         answer = input('Enter a letter:')
+        answer = answer.lower()
         if len(answer) == 1 and answer.isalpha() and answer not in guess_letters:
             guess_letters.append(answer)
             if answer in word:
