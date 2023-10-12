@@ -1,6 +1,6 @@
 import random
 
-start_message = "Welcome to Hangman! The goal of the game is to complete the secret word by guessing letters. Each incorrect letter chosen will give you one strike. To begin, choose a difficulty: \n Easy - 10 strikes \n Medium - 8 strikes \n Hard - 6 strikes"
+start_message = "Welcome to Hangman! The goal of the game is to complete the secret word by guessing letters. Each incorrect letter chosen will give you one strike. To begin, choose a difficulty: \n Easy - 12 strikes \n Medium - 10 strikes \n Hard - 8 strikes"
 
 def gameStart():
     strikes = gameDifficulty()
@@ -21,11 +21,11 @@ def gameDifficulty():
     answer = input()
     answer = answer.lower()
     if answer == 'easy':
-        strikes = 10
+        strikes = 12
     elif answer == 'medium':
-        strikes = 8
+        strikes = 10
     elif answer == 'hard':
-        strikes = 6
+        strikes = 8
     else:
         return False
     return strikes
