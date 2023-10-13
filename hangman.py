@@ -20,11 +20,11 @@ def gameStart():
 def gameDifficulty():
     answer = input()
     answer = answer.lower()
-    if answer == 'easy':
+    if answer == 'easy' or answer == 'e':
         strikes = 12
-    elif answer == 'medium':
+    elif answer == 'medium' or answer == 'm':
         strikes = 10
-    elif answer == 'hard':
+    elif answer == 'hard' or answer == 'h':
         strikes = 8
     else:
         return False
@@ -55,8 +55,20 @@ def gameRun(strikes, guess_count, guess_letters, word, hidden_word):
             gameRun(strikes, guess_count, guess_letters, word, hidden_word)
     elif "_" in hidden_word and guess_count == strikes:
         print("You've reached " + str(strikes) + " strikes. Game over!")
+        print("The word was '" + "".join(word) + "'")
+        print("Hit Enter to play again!")
+        input()
+        print(start_message)
+        gameStart()
+        return
     elif "_" not in hidden_word and guess_count < strikes:
         print("You win! Congratulations!")
+        print("Hit Enter to play again!")
+        input()
+        print(start_message)
+        gameStart()
+        return
+        
         
 print(start_message)
 wordLibrary = ['amber', 'aromas', 'autumn', 'bonfire', 'bounty', 'brisk', 'carving', 'chestnuts', 'chilly', 'chili', 'cider', 'cinnamon', 'cornstalk', 'cornucopia', 'costume', 'cranberry', 'crisp', 'crunching', 'equinox', 'family', 'feast', 'festival', 'foliage', 'frosty', 'gathering', 'generous', 'ghost', 'ghoulish', 'goblin', 'golden', 'gourds', 'gravy', 'grandparents', 'halloween', 'harvest', 'haunted', 'hayride', 'holiday', 'inviting', 'kernel', 'maize', 'mummy', 'november', 'october', 'orchard', 'parade', 'plenty', 'pumpkin', 'raking', 'roasting', 'rustling', 'savory', 'scarecrow', 'season', 'september', 'spicy', 'sweater', 'thankful', 'thanksgiving', 'turkey', 'trail', 'vampire', 'vibrant', 'zombie']
