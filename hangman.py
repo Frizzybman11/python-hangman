@@ -32,7 +32,7 @@ def gameDifficulty():
         
 def gameRun(strikes, guess_count, guess_letters, word, hidden_word):
     guess_letters.sort()
-    print(" ".join(hidden_word) + "  Strikes: " + str(guess_count) +  "  Guessed letters: " + ", ".join(guess_letters))
+    print(" ".join(hidden_word) + "  Strikes: " + str(guess_count) +  "  Guesses: " + ", ".join(guess_letters))
     if "_" in hidden_word and guess_count < strikes:
         answer = input('Enter a letter:')
         answer = answer.lower()
@@ -71,5 +71,5 @@ def gameRun(strikes, guess_count, guess_letters, word, hidden_word):
         
         
 print(start_message)
-wordLibrary = ['amber', 'aromas', 'autumn', 'bonfire', 'bounty', 'brisk', 'carving', 'chestnuts', 'chilly', 'chili', 'cider', 'cinnamon', 'cornstalk', 'cornucopia', 'costume', 'cranberry', 'crisp', 'crunching', 'equinox', 'family', 'feast', 'festival', 'foliage', 'frosty', 'gathering', 'generous', 'ghost', 'ghoulish', 'goblin', 'golden', 'gourds', 'gravy', 'grandparents', 'halloween', 'harvest', 'haunted', 'hayride', 'holiday', 'inviting', 'kernel', 'maize', 'mummy', 'november', 'october', 'orchard', 'parade', 'plenty', 'pumpkin', 'raking', 'roasting', 'rustling', 'savory', 'scarecrow', 'season', 'september', 'spicy', 'sweater', 'thankful', 'thanksgiving', 'turkey', 'trail', 'vampire', 'vibrant', 'zombie']
+wordLibrary = ['amber', 'aromas', 'autumn', 'blood', 'bonfire', 'bounty', 'brisk', 'broomstick', 'candle', 'candy', 'carving', 'chestnuts', 'chili', 'chilly', 'cider', 'cinnamon', 'cornstalk', 'cornucopia', 'costume', 'cranberry', 'creepy', 'crisp', 'crunching', 'disguise', 'equinox', 'family', 'fangs', 'feast', 'festival', 'foliage', 'frosty', 'gathering', 'generous', 'ghost', 'ghoulish', 'goblin', 'golden', 'gourds', 'grandparents', 'graveyard', 'gravy', 'halloween', 'harvest', 'haunted', 'hayride', 'holiday', 'inviting', 'kernel', 'maize', 'monster', 'mummy', 'november', 'october', 'orchard', 'parade', 'party', 'pirate', 'plenty', 'prince', 'princess', 'pumpkin', 'raking', 'roasting', 'rustling', 'savory', 'scarecrow', 'scary', 'season', 'september', 'skeleton', 'skull', 'slimy', 'spicy', 'spooky', 'sweater', 'thankful', 'thanksgiving', 'trail', 'turkey', 'vampire', 'vibrant', 'werewolf', 'wicked', 'witch', 'zombie']
 gameStart()
