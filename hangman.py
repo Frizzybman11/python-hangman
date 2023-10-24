@@ -1,8 +1,11 @@
 import random
+import os
 
 start_message = "Welcome to Hangman! The goal of the game is to complete the secret word by guessing letters. Each incorrect letter chosen will give you one strike. To begin, choose a difficulty: \n Easy - 12 strikes \n Medium - 10 strikes \n Hard - 8 strikes"
 
 def gameStart():
+    clear()
+    print(start_message)
     strikes = gameDifficulty()
     if strikes == False:
         print("Invalid difficulty. Please enter Easy, Medium, or Hard")
@@ -68,8 +71,9 @@ def gameRun(strikes, guess_count, guess_letters, word, hidden_word):
         print(start_message)
         gameStart()
         return
+
+def clear():
+    os.system('cls' if os.name=='nt' else 'clear')
         
-        
-print(start_message)
 wordLibrary = ['amber', 'aromas', 'autumn', 'blood', 'bonfire', 'bounty', 'brisk', 'broomstick', 'candle', 'candy', 'carving', 'chestnuts', 'chili', 'chilly', 'cider', 'cinnamon', 'cornstalk', 'cornucopia', 'costume', 'cranberry', 'creepy', 'crisp', 'crunching', 'disguise', 'equinox', 'family', 'fangs', 'feast', 'festival', 'foliage', 'frosty', 'gathering', 'generous', 'ghost', 'ghoulish', 'goblin', 'golden', 'gourds', 'grandparents', 'graveyard', 'gravy', 'halloween', 'harvest', 'haunted', 'hayride', 'holiday', 'inviting', 'kernel', 'maize', 'monster', 'mummy', 'november', 'october', 'orchard', 'parade', 'party', 'pirate', 'plenty', 'prince', 'princess', 'pumpkin', 'raking', 'roasting', 'rustling', 'savory', 'scarecrow', 'scary', 'season', 'september', 'skeleton', 'skull', 'slimy', 'spicy', 'spooky', 'sweater', 'thankful', 'thanksgiving', 'trail', 'turkey', 'vampire', 'vibrant', 'werewolf', 'wicked', 'witch', 'zombie']
 gameStart()
